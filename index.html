@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portofolio - M. Darrel</title>
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="main-container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="#" style="color: white;">Web Profile</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section id="home">
+                <div class="home-left">
+                    <h3 class="pre-title">Hello Everyone, My Name </h3>
+                    <h1 class="home-name">MUHAMMAD DARREL AL GHIFFARI</h1>
+                    <p style="text-align: justify;">I am Muhammad Darrel Al Ghiffari, a grade 11 student at MAN Insan
+                        Cendekia Batam. I have a great interest in earth science and arts, especially in playing hadroh.
+                        This website was created as a place to introduce myself, share experiences, and showcase various
+                        skills and achievements that I have achieved.</p>
+                    <br>
+                    <a href="https://www.instagram.com/_ddrrel31_/" target="_blank">
+                        <button class="btn">Click me!</button>
+                    </a>
+                </div>
+                <div class="home-right">
+                    <img src="assets/fotopropil.jpg" alt="Profile Picture">
+                </div>
+            </section>
+        </div>
+        <div id="progress-bar"></div>
+        <script>
+            window.onscroll = function () {
+                let scrollTop = document.documentElement.scrollTop;
+                let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrolled = (scrollTop / scrollHeight) * 100;
+                document.getElementById("progress-bar").style.width = scrolled + "%";
+            };
+        </script>
+
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <div class="main-container">
+            <h2 class="section-title-about">About Me</h2>
+            <p class="text-center" style="text-align: justify;">I am a grade 11 student at MAN Insan Cendekia Batam. I
+                have a great interest in earth sciences, especially in the fields of geography, meteorology, and
+                climatology. I enjoy studying how natural phenomena occur, from weather changes to the dynamics of the
+                earth that affect our daily lives. This interest also drives me to aspire to become a student at the
+                Bogor Agricultural Institute (IPB) or become a cadet at the Meteorology, Climatology and Geophysics
+                College (STMKG), because I want to study the science more professionally and contribute to the field of
+                environment and disaster mitigation. In addition to my love for earth sciences, I am also active in
+                hadroh art, an Islamic musical art that I think is not only beautiful, but also a means to foster a love
+                for Islamic culture. I believe that the balance between science and art is very important in life,
+                because both complement each other in forming a better character.</p>
+            <br>
+            <div class="grid-3">
+                <div class="about">
+                    <div class="about-icon">
+                        <img src="./assets/logo osn kebumian.png" alt="OSN Kebumian">
+                    </div>
+                    <h4>Olimpiade Sains Nasional: Kebumian</h4>
+                    <p>I participated in OSN in the Earth Sciences field for two years and am continuing this year to
+                        become a medalist.</p>
+                </div>
+                <div class="about">
+                    <div class="about-icon">
+                        <img src="./assets/logo kpmn.png" alt=KPMN">
+                    </div>
+                    <h4>Kemah Pramuka Madrasah Nasional</h4>
+                    <p>I attended a national madrasa camp in 2024 representing KEPRI Province at the Cibubur camping
+                        ground.</p>
+                </div>
+                <div class="about   ">
+                    <div class="about-icon">
+                        <img src="./assets/logo uiso.png" alt="UISO">
+                    </div>
+                    <h4>Universitas Indonesia Science Olympiad</h4>
+                    <p>I was a finalist in the 2024 UISO in the Earth Sciences category held at the University of
+                        Indonesia.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="quote-box">
+            <p id="quote">"The best way to predict the future is to study the past." - James Hutton</p>
+            <button onclick="generateQuote()"> Changes Quote</button>
+            <script>
+                const quotes = [
+                    '"The best way to predict the future is to study the past." - James Hutton',
+                    '"Rocks tell the story of Earth better than any book ever written." - John McPhee',
+                    '"Geology gives us a key to the patience of nature." - Will Durant',
+                    '"Geology is the study of pressure and time. That’s all it takes, really. Pressure, and time." - Andy Dufresne',
+                    '"The present is the key to the past." - Charles Lyell',
+                    '"Mountains are not just mountains. They are stories written in rock." - Anonymous',
+                    '"We learn geology the morning after the earthquake." - Ralph Waldo Emerson',
+                    '"Volcanoes are Earth’s way of letting off steam." - Haroun Tazieff',
+                    '"Geologists have a saying – rocks remember." - Neil Armstrong'
+                ];
+                function generateQuote() {
+                    let randomIndex = Math.floor(Math.random() * quotes.length);
+                    document.getElementById("quote").innerText = quotes[randomIndex];
+                }
+
+            </script>
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="section-heading text-center">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="single-skill-content">
+                            <div class="barWrapper">
+                                <span class="progressText">Chemistry</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-Chemistry"></div>
+                                    </div>
+                                    <h3>90%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">Physics</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-Physics"></div>
+                                    </div>
+                                    <h3>85%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">Matemathics</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-mathematics"></div>
+                                    </div>
+                                    <h3>80%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">Earth-science</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-Earth-science"></div>
+                                    </div>
+                                    <h3>90%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">Geography</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-Geography"></div>
+                                    </div>
+                                    <h3>92%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">HTML</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-HTML"></div>
+                                    </div>
+                                    <h3>75%</h3>
+                                </div>
+                            </div>
+                            <div class="barWrapper">
+                                <span class="progressText">Public-Speaking</span>
+                                <div class="single-progress-txt">
+                                    <div class="progress">
+                                        <div class="progress-bar-Public-Speaking"></div>
+                                    </div>
+                                    <h3>85%</h3>
+                                </div>
+                            </div>
+                            <!--klo mau nambah disini yahh-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="section-heading text-center">
+            <h2>Let's Connect!</h2>
+        </div>
+        <div class="container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send!</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/_ddrrel31_/" target="_blank">
+                    <img src="./assets/OIP (5).jpeg" alt="Instagram">
+                </a>
+                <a href="https://x.com/Moonhero_" target="_blank">
+                    <img src="./assets/logo x.jpeg" alt="X">
+                </a>
+                <a href="https://github.com/Darrel3108" target="_blank">
+                    <img src="./assets/logo github.png" alt="GitHub">
+                </a>
+            </div>
+            <p>&#169; 2025 Muhammad Darrel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
